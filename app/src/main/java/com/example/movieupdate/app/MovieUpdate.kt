@@ -1,0 +1,26 @@
+package com.example.movieupdate.app
+
+import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
+import com.example.movieupdate.ui.main.dependency_injection.mainModule
+import com.example.movieupdate.ui.launcher.dependency_injection.launcherModule
+import com.example.movieupdate.network.dependency_injection.networkModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
+
+class MovieUpdate : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        startKoin {
+            androidContext(this@MovieUpdate)
+            androidLogger(Level.ERROR)
+            modules(networkModule + launcherModule + mainModule)
+        }
+    }
+}

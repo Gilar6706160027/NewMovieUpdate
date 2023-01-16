@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_now_playing"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="@string/bottom_nav_now_playing"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_popular"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="@string/bottom_nav_popular"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_top_rated"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="@string/bottom_nav_top_rated"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_upcoming"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_24"
+        app:showAsAction="withText"
+        android:title="@string/bottom_nav_upcoming" />
+
+</menu>
